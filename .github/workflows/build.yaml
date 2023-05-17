@@ -63,7 +63,7 @@ jobs:
       - id: meta
         uses: docker/metadata-action@v4
         with:
-          context: git
+          context: workflow
           images: |
             name=localhost:5000/localbuild/${{ env.NAME }}
             name=${{ env.IMAGE_NAME }},enable=${{ inputs.publish }}

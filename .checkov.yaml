@@ -1,0 +1,13 @@
+block-list-secret-scan: []
+download-external-modules: false
+evaluate-variables: true
+external-modules-download-path: .external_modules
+framework:
+- all
+mask: []
+quiet: true
+secrets-history-timeout: 12h
+secrets-scan-file-type: []
+summary-position: top
+skip-check:
+  - CKV_DOCKER_2

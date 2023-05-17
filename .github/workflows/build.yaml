@@ -75,7 +75,7 @@ jobs:
             type=ref,event=pr
             type=ref,event=tag
             type=schedule
-            type=raw,value=latest,enable={{is_default_branch}}
+            type=raw,value=latest,enable=${{ github.event_name != 'pull_request' && github.ref == 'refs/heads/main' }}
           flavor: |
             latest=false
       - uses: docker/setup-qemu-action@v2

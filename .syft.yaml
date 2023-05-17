@@ -1,0 +1,18 @@
+catalogers:
+  - alpmdb
+  - apkdb
+# - binary
+  - dotnet-deps
+  - dpkgdb
+  - go-module-binary
+  - graalvm-native-image
+  - java
+  - javascript-package
+  - linux-kernel
+  - nix-store
+  - php-composer-installed
+  - portage
+  - python-package
+  - rpm-db
+  - ruby-gemspec
+  - sbom

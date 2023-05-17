@@ -1,0 +1,34 @@
+name: Pull Request
+
+on:
+  pull_request:
+    types: [opened,edited,reopened,ready_for_review]
+
+permissions:
+  contents: read
+
+jobs:
+  commit-check:
+    name: "Commit Check"
+    uses: ./.github/workflows/commit-check.yaml
+  code-check:
+    name: "Code Check"
+    needs:
+      - commit-check
+    permissions:
+      contents: write
+      pull-requests: write
+      security-events: write
+    uses: ./.github/workflows/code-check.yaml
+  build:
+    name: "Build"
+    needs:
+      - code-check
+    permissions:
+      contents: write
+      packages: write
+      id-token: write
+      security-events: write
+    uses: ./.github/workflows/build.yaml
+    with:
+      publish: true

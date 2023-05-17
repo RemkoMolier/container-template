@@ -34,4 +34,4 @@ jobs:
       security-events: write
     uses: ./.github/workflows/build.yaml
     with:
-      publish: false
+      publish: true

@@ -30,4 +30,4 @@ jobs:
       security-events: write
     uses: ./.github/workflows/build.yaml
     with:
-      publish: true
+      publish: ${{ ! github.event.pull_request.head.repo.fork }}

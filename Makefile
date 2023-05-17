@@ -16,7 +16,7 @@ variables : ## Print value of variables
 .PHONY : name
 
 setup : ## Set up git handling
-	@pre-commit install --hook-type precommit --hook-type commit-msg
+	@pre-commit install --hook-type pre-commit --hook-type commit-msg
 .PHONY : setup
 
 # --------------------- #

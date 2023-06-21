@@ -121,7 +121,7 @@ jobs:
         with:
           sarif_file: "trivy-results.sarif"
           category: trivy
-      - uses: anchore/sbom-action@v0.14.2
+      - uses: anchore/sbom-action@v0.14.3
         with:
           image: "localhost:5000/localbuild/${{ env.NAME }}:${{ steps.meta.outputs.version }}"
           artifact-name: ${{ env.NAME }}.pdx

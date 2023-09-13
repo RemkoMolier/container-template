@@ -61,7 +61,7 @@ jobs:
       - run: |
           echo "IMAGE_NAME=ghcr.io/$(echo '${{ github.repository_owner }}' | tr '[:upper:]' '[:lower:]')/${NAME}" >> "$GITHUB_ENV"
       - id: meta
-        uses: docker/metadata-action@v4
+        uses: docker/metadata-action@v5
         with:
           context: workflow
           images: |
